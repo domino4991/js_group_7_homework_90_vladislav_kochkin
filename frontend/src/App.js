@@ -116,7 +116,7 @@ function App() {
         setState({...state, mouseDown: false, pixels: []});
     };
 
-    const onChangeColor = e => {
+    const onChangeField = e => {
         const name = e.target.name;
         const value = e.target.value;
         setState(prevState => ({
@@ -135,7 +135,7 @@ function App() {
                 type="color"
                 name="color"
                 value={state.color}
-                onChange={e => onChangeColor(e)}
+                onChange={e => onChangeField(e)}
                 className='Control-input'
             />
             <label htmlFor='width'>Ширина кисти: </label>
@@ -144,7 +144,7 @@ function App() {
                 type='text'
                 name='width'
                 value={state.width}
-                onChange={e => onChangeColor(e)}
+                onChange={e => onChangeField(e)}
                 className='Control-input'
             />
             <label htmlFor='figure'>Тип кисти: </label>
@@ -152,7 +152,7 @@ function App() {
                 id='figure'
                 name='figure'
                 value={state.figure}
-                onChange={e => onChangeColor(e)}
+                onChange={e => onChangeField(e)}
                 className='Control-input'
             >
                 <option value='square'>Квадрат</option>
